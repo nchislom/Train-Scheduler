@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap css cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- bootstrap js cdn -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <!-- moment sj cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+    <!-- firebase js -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    
+    <title>Train Scheduler</title>
+
+</head>
+<body>
+    <div class="container-fluid">
+        
+        <!-- Jumbotron -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">Anytime is Train Time</h1>
+                <p class="lead">Choo Choo. Chee. Chee.</p>
+            </div>
+        </div>    
+        
+        <!-- Table Card -->
+        <div class="card">
+            <div class="card-header">Current Train Schedule</div>
+            <div class="card-body">
+                
+                <!-- Table-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Train Data Generates Here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Form Card -->
+        <div class="card">
+            <div class="card-header">Add Train</div>
+            <div class="card-body">
+                <div class="form-group">
+                    <!-- Train Name -->
+                    <label for="train-name">Train Name</label>
+                    <input type="text" class="form-control" name="train-name-input" id="train-name-input" aria-describedby="helpId" placeholder="">
+                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+
+                    <!-- Destination -->
+                    <label for="train-destination">Destination</label>
+                    <input type="text" class="form-control" name="train-destination-input" id="train-destination-input" aria-describedby="helpId" placeholder="">
+                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+
+                    <!-- First Train Time -->
+                    <label for="first-train">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" name="first-train-input" id="first-train-input" aria-describedby="helpId" placeholder="">
+                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+
+                    <!-- Frequency -->
+                    <label for="train-frequency">Frequency (min)</label>
+                    <input type="text" class="form-control" name="train-frequency-input" id="train-frequency-input" aria-describedby="helpId" placeholder="">
+                    <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                </div>
+
+                <button type="button" id="submit-button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Main Application -->
+    <script src="./assets/javascript/app.js"></script>
+</body>
+</html>
