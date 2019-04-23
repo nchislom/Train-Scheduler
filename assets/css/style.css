@@ -1,0 +1,14 @@
+.body {}
+
+.container-fluid {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.card {
+    margin-bottom: 2em;
+}
+
+tr:nth-child(even) {
+    background: #EEE;
+}

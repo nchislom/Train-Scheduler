@@ -7,6 +7,12 @@
 
     <!-- bootstrap css cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- fontawsome cdn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
     <!-- bootstrap js cdn -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -29,16 +35,16 @@
     <div class="container-fluid">
         
         <!-- Jumbotron -->
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron bg-primary text-white jumbotron-fluid">
             <div class="container">
-                <h1 class="display-3">Anytime is Train Time</h1>
-                <p class="lead">Choo Choo. Chee. Chee.</p>
+                <h1 class="display-3">Train Line Scheduler</h1>
+                <p class="lead">Realtime Train Scheduling App</p>
             </div>
         </div>    
         
         <!-- Table Card -->
         <div class="card">
-            <div class="card-header">Current Train Schedule</div>
+            <div class="card-header bg-primary text-white">Current Train Schedule <i class="far fa-clock"></i></div>
             <div class="card-body">
                 
                 <!-- Table-->
@@ -52,7 +58,7 @@
                             <th>Minutes Away</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="train-table-data">
                         <!-- Train Data Generates Here -->
                     </tbody>
                 </table>
@@ -61,7 +67,7 @@
         
         <!-- Form Card -->
         <div class="card">
-            <div class="card-header">Add Train</div>
+            <div class="card-header bg-primary text-white">Add Train <i class="fas fa-train"></i></div>
             <div class="card-body">
                 <div class="form-group">
                     <!-- Train Name -->
@@ -89,6 +95,28 @@
             </div>
         </div>
 
+    </div>
+
+    <!-- Error Modal -->
+        
+    <!-- Modal -->
+    <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <span id="modal-message"></span>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
     </div>
     
     <!-- Main Application -->
